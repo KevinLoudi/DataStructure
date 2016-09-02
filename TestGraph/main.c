@@ -1,3 +1,7 @@
+/* spanning tree of that graph is a tree and connects all
+
+
+*/
 // C++ program for Kruskal's algorithm to find Minimum Spanning Tree
 // of a given connected, undirected and weighted graph
 #include <stdio.h>

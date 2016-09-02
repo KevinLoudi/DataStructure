@@ -5,7 +5,9 @@
  * @date 2013/11/07
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include "avltree.h"
+#include "spantree.h"
 
 static int arr[]= {3,2,1,4,5,6,7,16,15,14,13,12,11,10,8,9};
 #define TBL_SIZE(a) ( (sizeof(a)) / (sizeof(a[0])) )
@@ -53,4 +55,5 @@ void main()
 
     // Ïú»Ù¶þ²æÊ÷
     destroy_avltree(root);
+
 }

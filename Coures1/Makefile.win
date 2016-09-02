@@ -1,17 +1,17 @@
-# Project: AvlTree
+# Project: Parameters
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o avltree.o spantree.o
-LINKOBJ  = main.o avltree.o spantree.o
+OBJ      = main.o Grade.o Exercise1.o
+LINKOBJ  = main.o Grade.o Exercise1.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = AvlTree.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
+BIN      = Coures1.exe
+CXXFLAGS = $(CXXINCS) -ansi -g3
+CFLAGS   = $(INCS) -ansi -g3
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -22,13 +22,13 @@ clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
 
-avltree.o: avltree.c
-	$(CC) -c avltree.c -o avltree.o $(CFLAGS)
+Grade.o: Grade.cpp
+	$(CPP) -c Grade.cpp -o Grade.o $(CXXFLAGS)
 
-spantree.o: spantree.c
-	$(CC) -c spantree.c -o spantree.o $(CFLAGS)
+Exercise1.o: Exercise1.cpp
+	$(CPP) -c Exercise1.cpp -o Exercise1.o $(CXXFLAGS)
